@@ -1,0 +1,170 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+    --text: 1.5rem;
+    --head: calc(1rem + 5vw);
+}
+
+
+body{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+.hero-section, .contact-section, .about-section{
+    min-height: 100vh;
+    background:linear-gradient(black, transparent),url(https://images.unsplash.com/photo-1579751626657-72bc17010498?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjF8fHBpenphfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    animation: slide 1s ease-in-out;
+    
+}
+
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    padding: 0rem 1rem;
+    color: white;
+    transform: translateY(-100%);
+    animation: movedown 850ms ease-in 1s forwards;
+    position: fixed;
+    background-color: black;
+    width: 100%;
+}
+@keyframes movedown{
+    from{ transform: translateY(-100%);
+    }to{
+        transform: translateY(0%);
+    }
+}
+
+.navbar ul{
+    list-style: none;
+   }
+
+.navbar ul li{
+    display: inline-block;
+    margin-left: 3rem;
+    font-size: var(--text);
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: rgb(253, 253, 253);
+    border-bottom: 2px solid transparent;
+
+}
+
+.navbar ul li a:hover{
+    border-bottom: 2px solid white;
+
+}
+
+.hero-text{
+    color: white;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+@keyframes slide{
+    from{
+        transform: translateX(-100%);
+    }to{
+        transform: translateX(0%);
+    }
+}
+
+
+.hero-text a{
+    color: white;
+    background-color: #f6b93b;
+    text-decoration: none;
+    font-weight: 900;
+    padding: 0.8rem 1rem;
+    margin: 0.8rem auto;
+    display: block;
+    transition: opacity 250ms linear;
+
+}
+
+.hero-text a:hover{
+    opacity: 0.8;
+}
+
+.hero-text h2{
+    font-size: var(--head);
+}
+
+.hero-text p{
+    font-size: 3rem;
+}
+/* Add this to your existing CSS code */
+
+.contact-section {
+    padding: 6rem 0;
+  }
+  
+  .contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+  }
+  
+  .contact-container h2 {
+    font-size: var(--head);
+    margin-bottom: 1rem;
+  }
+  
+  .contact-container p {
+    font-size: var(--text);
+    margin-bottom: 2rem;
+  }
+  
+  .contact-container ul {
+    list-style: none;
+    padding: 0;
+
+  }
+  
+  .contact-container li {
+    font-size: var(--text);
+    margin-bottom: 1rem;
+  }
+  
+  .about-section {
+    background-color: #fff;
+    padding: 6rem 0;
+  }
+  
+  .about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+  }
+  
+  .about-container h2 {
+    font-size: var(--head);
+    margin-bottom: 1rem;
+  }
+  
+  .about-container p {
+    font-size: var(--text);
+  }
+  
+
